@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'check_express_page.dart';
-import 'home_page.dart';
-import 'my_page.dart';
-import 'order_page.dart';
-import 'send_express_page.dart';
+import 'pages/check_express_page.dart';
+import 'pages/home_page.dart';
+import 'pages/my_page.dart';
+import 'pages/order_page.dart';
+import 'pages/send_express_page.dart';
 import 'widgets/radius_inkwell_widget.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -40,22 +41,22 @@ class _MyHomePageState extends State<MyHomePage> {
           MyPage()
         ]),
         floatingActionButton: Container(
-            width: 80,
-            height: 80,
+            width: 118.r,
+            height: 118.r,
             alignment: Alignment.center,
             child: Container(
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(40),
+                    borderRadius: BorderRadius.circular(54.r),
                     color: Theme.of(context).primaryColor),
-                width: 70,
-                height: 70,
+                width: 108.r,
+                height: 108.r,
                 child: buildBottomItemView(2, isMiddle: true))),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         bottomNavigationBar: BottomAppBar(
             shape: CircularNotchedRectangle(),
             child: Container(
-                height: 68,
+                height: 108.h,
                 child: Row(children: [
                   buildBottomItemView(0),
                   buildBottomItemView(1),
@@ -80,7 +81,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     width: isMiddle ? 70 : 60,
                     child: Column(children: [
                       Icon(Icons.unarchive_sharp,
-                          color: isMiddle ? Colors.white : Colors.black),
+                          color: isMiddle ? Colors.white : Colors.black,
+                          size: 48.r),
                       Text(titles[index],
                           style: TextStyle(
                               color: isMiddle ? Colors.white : Colors.black))
