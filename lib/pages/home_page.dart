@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> {
                         Expanded(
                           child: Column(children: [
                             Icon(IconFont.shipping,
-                                size: 45.r, color: Colors.white),
+                                size: 60.r, color: Colors.white),
                             SizedBox(height: 5.h),
                             Text('在线寄件', style: TextStyle(color: Colors.white))
                           ], mainAxisSize: MainAxisSize.min),
@@ -60,7 +60,7 @@ class _HomePageState extends State<HomePage> {
                         Expanded(
                           child: Column(children: [
                             Icon(IconFont.package,
-                                size: 45.r, color: Colors.white),
+                                size: 60.r, color: Colors.white),
                             SizedBox(height: 5.h),
                             Text('电商包裹', style: TextStyle(color: Colors.white))
                           ], mainAxisSize: MainAxisSize.min),
@@ -68,7 +68,7 @@ class _HomePageState extends State<HomePage> {
                         Expanded(
                           child: Column(children: [
                             Icon(IconFont.scan,
-                                size: 45.r, color: Colors.white),
+                                size: 60.r, color: Colors.white),
                             SizedBox(height: 5.h),
                             Text('扫一扫', style: TextStyle(color: Colors.white))
                           ], mainAxisSize: MainAxisSize.min),
@@ -76,7 +76,7 @@ class _HomePageState extends State<HomePage> {
                         Expanded(
                           child: Column(children: [
                             Icon(IconFont.time,
-                                size: 45.r, color: Colors.white),
+                                size: 60.r, color: Colors.white),
                             SizedBox(height: 5.h),
                             Text('时效价格', style: TextStyle(color: Colors.white))
                           ], mainAxisSize: MainAxisSize.min),
@@ -86,12 +86,18 @@ class _HomePageState extends State<HomePage> {
         SizedBox(height: 40.h),
         RadiusInkWellWidget(
             onPressed: () {},
-            color: Colors.grey,
+            color: Colors.grey[200],
             radius: 40.h,
             child: Container(
                 height: 80.h,
                 width: 673.w,
-                child: Row(children: [], mainAxisSize: MainAxisSize.min),
+                child: Row(children: [
+                  Icon(Icons.search, size: 30.r),
+                  Text(
+                    '查询1000+快递公司物流',
+                    style: TextStyle(fontSize: 30.sp),
+                  )
+                ], mainAxisSize: MainAxisSize.min),
                 alignment: Alignment.center)),
       ]),
     );

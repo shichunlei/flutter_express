@@ -28,7 +28,7 @@ class _MyHomePageState extends State<MyHomePage> {
     list = [
       {"title": "首页", "icon": IconFont.home},
       {"title": "查快递", "icon": IconFont.express},
-      {"title": "寄快递", "icon": IconFont.send},
+      {"title": "寄件", "icon": IconFont.send},
       {"title": "订单", "icon": IconFont.order},
       {"title": "我的", "icon": IconFont.my}
     ];
@@ -57,7 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(54.r),
-                    color: Theme.of(context).primaryColor),
+                    color: Colors.white),
                 width: 108.r,
                 height: 108.r,
                 child: buildBottomItemView(2, isMiddle: true))),
@@ -91,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: Column(children: [
                       Icon(list[index]['icon'],
                           color: isMiddle
-                              ? Colors.white
+                              ? Theme.of(context).primaryColor
                               : index == selectedIndex
                                   ? Theme.of(context).primaryColor
                                   : Colors.grey,
@@ -99,7 +99,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       Text(list[index]['title'],
                           style: TextStyle(
                               color: isMiddle
-                                  ? Colors.white
+                                  ? Theme.of(context).primaryColor
                                   : index == selectedIndex
                                       ? Theme.of(context).primaryColor
                                       : Colors.grey))
