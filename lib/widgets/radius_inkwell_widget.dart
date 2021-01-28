@@ -22,6 +22,10 @@ class RadiusInkWellWidget extends StatelessWidget {
 
   final EdgeInsetsGeometry padding;
 
+  final List<BoxShadow> boxShadow;
+
+  final bool showShadow;
+
   const RadiusInkWellWidget({
     Key key,
     @required this.child,
@@ -35,12 +39,25 @@ class RadiusInkWellWidget extends StatelessWidget {
     this.colors,
     this.begin = Alignment.centerLeft,
     this.end = Alignment.centerRight,
+    this.showShadow: false,
+    this.boxShadow,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
         margin: margin,
+        decoration: BoxDecoration(
+            boxShadow: showShadow
+                ? boxShadow ??
+                    [
+                      BoxShadow(
+                          blurRadius: 13,
+                          spreadRadius: -14,
+                          offset: Offset(0, 14),
+                          color: Theme.of(context).cardColor)
+                    ]
+                : []),
         child: Material(
             type: MaterialType.transparency,
             child: Ink(

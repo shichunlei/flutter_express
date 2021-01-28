@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_express/widgets/arc_clipper.dart';
+import 'package:flutter_express/widgets/radius_inkwell_widget.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import '../icon_font.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key}) : super(key: key);
@@ -21,10 +26,74 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("首页"),
-      ),
-      body: Container(),
+      body: Column(children: [
+        Arc(
+            arcType: ArcType.CONVEX,
+            edge: Edge.BOTTOM,
+            height: 45.h,
+            child: Container(
+                color: Theme.of(context).primaryColor,
+                height: 372.h,
+                width: double.infinity,
+                child: Column(children: [
+                  Container(
+                      child: AppBar(
+                          title: Text('寄快递，上千峰快递'),
+                          centerTitle: false,
+                          elevation: 0,
+                          backgroundColor: Colors.transparent),
+                      height: ScreenUtil().statusBarHeight + kToolbarHeight),
+                  Container(
+                      height: 372.h -
+                          45.h -
+                          (ScreenUtil().statusBarHeight + kToolbarHeight),
+                      alignment: Alignment.center,
+                      child: Row(children: [
+                        Expanded(
+                          child: Column(children: [
+                            Icon(IconFont.shipping,
+                                size: 45.r, color: Colors.white),
+                            SizedBox(height: 5.h),
+                            Text('在线寄件', style: TextStyle(color: Colors.white))
+                          ], mainAxisSize: MainAxisSize.min),
+                        ),
+                        Expanded(
+                          child: Column(children: [
+                            Icon(IconFont.package,
+                                size: 45.r, color: Colors.white),
+                            SizedBox(height: 5.h),
+                            Text('电商包裹', style: TextStyle(color: Colors.white))
+                          ], mainAxisSize: MainAxisSize.min),
+                        ),
+                        Expanded(
+                          child: Column(children: [
+                            Icon(IconFont.scan,
+                                size: 45.r, color: Colors.white),
+                            SizedBox(height: 5.h),
+                            Text('扫一扫', style: TextStyle(color: Colors.white))
+                          ], mainAxisSize: MainAxisSize.min),
+                        ),
+                        Expanded(
+                          child: Column(children: [
+                            Icon(IconFont.time,
+                                size: 45.r, color: Colors.white),
+                            SizedBox(height: 5.h),
+                            Text('时效价格', style: TextStyle(color: Colors.white))
+                          ], mainAxisSize: MainAxisSize.min),
+                        )
+                      ]))
+                ]))),
+        SizedBox(height: 40.h),
+        RadiusInkWellWidget(
+            onPressed: () {},
+            color: Colors.grey,
+            radius: 40.h,
+            child: Container(
+                height: 80.h,
+                width: 673.w,
+                child: Row(children: [], mainAxisSize: MainAxisSize.min),
+                alignment: Alignment.center)),
+      ]),
     );
   }
 }

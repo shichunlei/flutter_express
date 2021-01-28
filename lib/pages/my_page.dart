@@ -108,7 +108,8 @@ class _MyPageState extends State<MyPage> {
                     child: RadiusInkWellWidget(
                         child: Container(
                             child: Column(children: [
-                              Icon(IconFont.balance, size: 45.r),
+                              Icon(IconFont.balance,
+                                  size: 45.r, color: Color(0xff0066FE)),
                               SizedBox(height: 5.h),
                               Text('账户余额')
                             ], mainAxisSize: MainAxisSize.min),
@@ -125,7 +126,8 @@ class _MyPageState extends State<MyPage> {
                     child: RadiusInkWellWidget(
                         child: Container(
                             child: Column(children: [
-                              Icon(IconFont.coupon, size: 45.r),
+                              Icon(IconFont.coupon,
+                                  size: 45.r, color: Color(0xffFE777E)),
                               SizedBox(height: 5.h),
                               Text('卡券包')
                             ], mainAxisSize: MainAxisSize.min),
@@ -142,7 +144,8 @@ class _MyPageState extends State<MyPage> {
                     child: RadiusInkWellWidget(
                         child: Container(
                             child: Column(children: [
-                              Icon(IconFont.bank_card, size: 45.r),
+                              Icon(IconFont.bank_card,
+                                  size: 45.r, color: Color(0xff54EB00)),
                               SizedBox(height: 5.h),
                               Text('银行卡')
                             ], mainAxisSize: MainAxisSize.min),

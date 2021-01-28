@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'icon_font.dart';
 import 'pages/check_express_page.dart';
 import 'pages/home_page.dart';
 import 'pages/my_page.dart';
@@ -18,11 +19,19 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int selectedIndex = 0;
 
-  List<String> titles = ["首页", "查快递", "寄快递", "订单", "我的"];
+  List<Map> list = [];
 
   @override
   void initState() {
     super.initState();
+
+    list = [
+      {"title": "首页", "icon": IconFont.home},
+      {"title": "查快递", "icon": IconFont.express},
+      {"title": "寄快递", "icon": IconFont.send},
+      {"title": "订单", "icon": IconFont.order},
+      {"title": "我的", "icon": IconFont.my}
+    ];
   }
 
   @override
@@ -56,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
         bottomNavigationBar: BottomAppBar(
             shape: CircularNotchedRectangle(),
             child: Container(
-                height: 108.h,
+                height: 108.r,
                 child: Row(children: [
                   buildBottomItemView(0),
                   buildBottomItemView(1),
@@ -77,15 +86,23 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
                 child: Container(
                     alignment: Alignment.center,
-                    height: isMiddle ? 70 : 60,
-                    width: isMiddle ? 70 : 60,
+                    height: 108.r,
+                    width: 108.r,
                     child: Column(children: [
-                      Icon(Icons.unarchive_sharp,
-                          color: isMiddle ? Colors.white : Colors.black,
+                      Icon(list[index]['icon'],
+                          color: isMiddle
+                              ? Colors.white
+                              : index == selectedIndex
+                                  ? Theme.of(context).primaryColor
+                                  : Colors.grey,
                           size: 48.r),
-                      Text(titles[index],
+                      Text(list[index]['title'],
                           style: TextStyle(
-                              color: isMiddle ? Colors.white : Colors.black))
+                              color: isMiddle
+                                  ? Colors.white
+                                  : index == selectedIndex
+                                      ? Theme.of(context).primaryColor
+                                      : Colors.grey))
                     ], mainAxisSize: MainAxisSize.min)))),
         flex: 1);
   }

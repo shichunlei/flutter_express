@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
         title: 'Flutter Express',
         theme: ThemeData(
             backgroundColor: Colors.grey[200],
-            primarySwatch: Colors.blue,
+            primaryColor: Color(0xff317EE7),
             visualDensity: VisualDensity.adaptivePlatformDensity),
         home: MyHomePage());
   }
