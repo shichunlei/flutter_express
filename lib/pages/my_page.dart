@@ -44,25 +44,25 @@ class _MyPageState extends State<MyPage> {
             height: 265.h,
             width: double.infinity,
             color: Theme.of(context).primaryColor,
-            padding: EdgeInsets.only(top: 106.h, left: 38.w, bottom: 33.h),
+            padding: EdgeInsets.only(top: 109.h, left: 41.w, bottom: 36.h),
             child: Row(children: [
               /// 头像
               RoundImage(
-                  width: 126.r,
-                  height: 126.r,
+                  width: 120.r,
+                  height: 120.r,
                   path:
                       'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.08087.cc%2Fuploads%2F20190415%2F18%2F1555325643-zhFdcDVQCS.jpg&refer=http%3A%2F%2Fimg.08087.cc&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1614391160&t=9a35269025efa31a3a231d03763e71a9',
-                  radius: 100,
+                  radius: 60.r,
                   border: Border.all(color: Colors.red, width: 5.r)),
-              SizedBox(width: 20.w),
+              SizedBox(width: 27.w),
               Column(children: [
-                SizedBox(height: 10.h),
+                SizedBox(height: 15.h),
                 Row(children: [
                   /// 姓名
                   Text('ZHANGSAN',
-                      style: TextStyle(color: Colors.white, fontSize: 35.sp)),
+                      style: TextStyle(color: Colors.white, fontSize: 36.sp)),
                   Container(
-                      margin: EdgeInsets.only(left: 30.w),
+                      margin: EdgeInsets.only(left: 32.w),
                       decoration: BoxDecoration(
                           color: Colors.white54,
                           borderRadius: BorderRadius.circular(20.h)),
@@ -79,7 +79,7 @@ class _MyPageState extends State<MyPage> {
                 /// 电话号码
                 Text('137****0002',
                     style: TextStyle(color: Colors.white, fontSize: 26.sp)),
-                SizedBox(height: 10.h)
+                SizedBox(height: 15.h)
               ], crossAxisAlignment: CrossAxisAlignment.start)
             ])),
         Container(
@@ -96,7 +96,9 @@ class _MyPageState extends State<MyPage> {
                       child: Row(children: [
                         Text('我的账号',
                             style: TextStyle(
-                                fontSize: 30.sp, fontWeight: FontWeight.w500)),
+                                fontSize: 32.sp,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500)),
                         Spacer(),
                         Icon(Icons.arrow_forward_ios_outlined)
                       ])),
@@ -109,9 +111,12 @@ class _MyPageState extends State<MyPage> {
                         child: Container(
                             child: Column(children: [
                               Icon(IconFont.balance,
-                                  size: 45.r, color: Color(0xff0066FE)),
-                              SizedBox(height: 5.h),
-                              Text('账户余额')
+                                  size: 40.r, color: Color(0xff5F84FE)),
+                              SizedBox(height: 26.h),
+                              Text('账户余额',
+                                  style: TextStyle(
+                                      fontSize: 24.sp,
+                                      color: Color(0xff333333)))
                             ], mainAxisSize: MainAxisSize.min),
                             height: 135.h,
                             alignment: Alignment.center),
@@ -127,9 +132,12 @@ class _MyPageState extends State<MyPage> {
                         child: Container(
                             child: Column(children: [
                               Icon(IconFont.coupon,
-                                  size: 45.r, color: Color(0xffFE777E)),
-                              SizedBox(height: 5.h),
-                              Text('卡券包')
+                                  size: 40.r, color: Color(0xffFE5F67)),
+                              SizedBox(height: 25.h),
+                              Text('卡券包',
+                                  style: TextStyle(
+                                      fontSize: 24.sp,
+                                      color: Color(0xff333333)))
                             ], mainAxisSize: MainAxisSize.min),
                             height: 135.h,
                             alignment: Alignment.center),
@@ -145,9 +153,12 @@ class _MyPageState extends State<MyPage> {
                         child: Container(
                             child: Column(children: [
                               Icon(IconFont.bank_card,
-                                  size: 45.r, color: Color(0xff54EB00)),
-                              SizedBox(height: 5.h),
-                              Text('银行卡')
+                                  size: 40.r, color: Color(0xff35F259)),
+                              SizedBox(height: 26.h),
+                              Text('银行卡',
+                                  style: TextStyle(
+                                      fontSize: 24.sp,
+                                      color: Color(0xff333333)))
                             ], mainAxisSize: MainAxisSize.min),
                             height: 135.h,
                             alignment: Alignment.center),
@@ -166,12 +177,15 @@ class _MyPageState extends State<MyPage> {
                           radius: 0,
                           color: Colors.white,
                           child: Container(
-                              width: 187.6.r,
-                              height: 187.6.r,
+                              width: 186.r,
+                              height: 186.r,
                               child: Column(children: [
                                 Icon(list[index]['icon'], size: 45.r),
-                                SizedBox(height: 5.h),
-                                Text(list[index]['title'])
+                                SizedBox(height: 25.h),
+                                Text(list[index]['title'],
+                                    style: TextStyle(
+                                        fontSize: 24.sp,
+                                        color: Color(0xff333333)))
                               ], mainAxisSize: MainAxisSize.min),
                               alignment: Alignment.center),
                         )),

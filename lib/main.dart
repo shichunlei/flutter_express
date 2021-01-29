@@ -17,7 +17,7 @@ void main() {
         .then((_) {
       runApp(ScreenUtilInit(
           child: MyApp(),
-          designSize: Size(753.61, 1340.43),
+          designSize: Size(750, 1334),
           allowFontScaling: false));
 
       if (Platform.isAndroid) {
