@@ -26,11 +26,46 @@ class _MyHomePageState extends State<MyHomePage> {
     super.initState();
 
     list = [
-      {"title": "首页", "icon": IconFont.home},
-      {"title": "查快递", "icon": IconFont.express},
-      {"title": "寄件", "icon": IconFont.send},
-      {"title": "订单", "icon": IconFont.order},
-      {"title": "我的", "icon": IconFont.my}
+      {
+        "title": "首页",
+        "icon": IconFont.home,
+        "normal": "assets/images/tab_home_normal.png",
+        "selected": "assets/images/tab_home_selected.png",
+        "height": 46.r,
+        "width": 46.r
+      },
+      {
+        "title": "查快递",
+        "icon": IconFont.express,
+        "normal": "assets/images/tab_consult_normal.png",
+        "selected": "assets/images/tab_consult_selected.png",
+        "height": 45.r,
+        "width": 46.r
+      },
+      {
+        "title": "寄件",
+        "icon": IconFont.send,
+        "normal": "assets/images/tab_send.png",
+        "selected": "assets/images/tab_send.png",
+        "height": 43.r,
+        "width": 43.r
+      },
+      {
+        "title": "订单",
+        "icon": IconFont.order,
+        "normal": "assets/images/tab_order_normal.png",
+        "selected": "assets/images/tab_order_selected.png",
+        "height": 39.r,
+        "width": 47.r
+      },
+      {
+        "title": "我的",
+        "icon": IconFont.my,
+        "normal": "assets/images/tab_my_normal.png",
+        "selected": "assets/images/tab_my_selected.png",
+        "height": 39.r,
+        "width": 43.r
+      }
     ];
   }
 

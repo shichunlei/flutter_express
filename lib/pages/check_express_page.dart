@@ -129,9 +129,11 @@ class _CheckExpressPageState extends State<CheckExpressPage> {
             Row(children: [
               RadiusInkWellWidget(
                   child: Container(
-                    height: 90.r,
-                    width: 90.r,
-                  ),
+                      height: 90.r,
+                      width: 90.r,
+                      child: Image.asset('assets/images/logo.png',
+                          width: 39.r, height: 36.r),
+                      alignment: Alignment.center),
                   onPressed: () {},
                   radius: 45.r,
                   color: Colors.transparent,
@@ -139,9 +141,11 @@ class _CheckExpressPageState extends State<CheckExpressPage> {
               SizedBox(width: 40.w),
               RadiusInkWellWidget(
                   child: Container(
-                    height: 90.r,
-                    width: 90.r,
-                  ),
+                      height: 90.r,
+                      width: 90.r,
+                      child: Image.asset('assets/images/logo.png',
+                          width: 39.r, height: 36.r),
+                      alignment: Alignment.center),
                   onPressed: () {},
                   radius: 45.r,
                   color: Colors.transparent,
@@ -149,9 +153,11 @@ class _CheckExpressPageState extends State<CheckExpressPage> {
               SizedBox(width: 40.w),
               RadiusInkWellWidget(
                   child: Container(
-                    height: 90.r,
-                    width: 90.r,
-                  ),
+                      height: 90.r,
+                      width: 90.r,
+                      child: Image.asset('assets/images/logo.png',
+                          width: 39.r, height: 36.r),
+                      alignment: Alignment.center),
                   onPressed: () {},
                   radius: 45.r,
                   color: Colors.transparent,
