@@ -22,6 +22,7 @@ class _SendExpressPageState extends State<SendExpressPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomInset: false,
         appBar: AppBar(title: Text("寄快递")),
         body: Container(
           child: Column(

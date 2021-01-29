@@ -24,6 +24,7 @@ class _CheckExpressPageState extends State<CheckExpressPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomInset: false,
         backgroundColor: Colors.white,
         appBar: AppBar(title: Text("千库快递")),
         body: Container(
@@ -55,7 +56,17 @@ class _CheckExpressPageState extends State<CheckExpressPage> {
                       child: Container(
                           height: 90.h,
                           child: Row(children: [
-                            Expanded(child: TextField()),
+                            Expanded(
+                                child: TextField(
+                                    decoration: InputDecoration(
+                                        border: InputBorder.none,
+                                        hintText: '请输入快递单号',
+                                        hintStyle: TextStyle(
+                                            fontSize: 32.sp,
+                                            color: Color(0xffB6B5B5))),
+                                    style: TextStyle(
+                                        fontSize: 32.sp,
+                                        color: Color(0xff999999)))),
                             InkWell(
                                 child: Icon(IconFont.scan2,
                                     color: Theme.of(context).primaryColor),

@@ -53,14 +53,30 @@ class _MyHomePageState extends State<MyHomePage> {
             width: 118.r,
             height: 118.r,
             alignment: Alignment.center,
-            child: Container(
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(54.r),
-                    color: Colors.white),
-                width: 108.r,
-                height: 108.r,
-                child: buildBottomItemView(2, isMiddle: true))),
+            child: FloatingActionButton(
+                onPressed: () => updateSelectIndex(2),
+                child: Container(
+                    decoration: BoxDecoration(
+                        color: selectedIndex == 2
+                            ? Theme.of(context).primaryColor
+                            : Colors.white,
+                        borderRadius: BorderRadius.circular(54.r)),
+                    alignment: Alignment.center,
+                    height: 108.r,
+                    width: 108.r,
+                    child: Column(children: [
+                      Icon(list[2]['icon'],
+                          color: selectedIndex == 2
+                              ? Colors.white
+                              : Theme.of(context).primaryColor,
+                          size: 48.r),
+                      Text(list[2]['title'],
+                          style: TextStyle(
+                              fontSize: 26.sp,
+                              color: selectedIndex == 2
+                                  ? Colors.white
+                                  : Theme.of(context).primaryColor))
+                    ], mainAxisSize: MainAxisSize.min)))),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         bottomNavigationBar: BottomAppBar(
             shape: CircularNotchedRectangle(),
@@ -75,7 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ]))));
   }
 
-  Expanded buildBottomItemView(int index, {bool isMiddle: false}) {
+  Expanded buildBottomItemView(int index) {
     return Expanded(
         child: Center(
             child: RadiusInkWellWidget(
@@ -90,19 +106,16 @@ class _MyHomePageState extends State<MyHomePage> {
                     width: 108.r,
                     child: Column(children: [
                       Icon(list[index]['icon'],
-                          color: isMiddle
+                          color: index == selectedIndex
                               ? Theme.of(context).primaryColor
-                              : index == selectedIndex
-                                  ? Theme.of(context).primaryColor
-                                  : Colors.grey,
+                              : Colors.grey,
                           size: 48.r),
                       Text(list[index]['title'],
                           style: TextStyle(
-                              color: isMiddle
+                              fontSize: 26.sp,
+                              color: index == selectedIndex
                                   ? Theme.of(context).primaryColor
-                                  : index == selectedIndex
-                                      ? Theme.of(context).primaryColor
-                                      : Colors.grey))
+                                  : Colors.grey))
                     ], mainAxisSize: MainAxisSize.min)))),
         flex: 1);
   }

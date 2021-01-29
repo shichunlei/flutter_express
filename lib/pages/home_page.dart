@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bubble_widget/flutter_bubble_widget.dart';
 import 'package:flutter_express/widgets/arc_clipper.dart';
 import 'package:flutter_express/widgets/radius_inkwell_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -26,6 +27,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       body: Column(children: [
         Arc(
@@ -92,7 +94,6 @@ class _HomePageState extends State<HomePage> {
                         )
                       ]))
                 ]))),
-        SizedBox(height: 42.h),
         RadiusInkWellWidget(
             onPressed: () {},
             color: Color(0xfff7f7f7),
@@ -106,7 +107,36 @@ class _HomePageState extends State<HomePage> {
                       style:
                           TextStyle(fontSize: 30.sp, color: Color(0xff999999)))
                 ], mainAxisSize: MainAxisSize.min),
-                alignment: Alignment.center)),
+                alignment: Alignment.center),
+            margin: EdgeInsets.only(bottom: 23.h, top: 42.h)),
+        BubbleWidget(
+            position: BubbleArrowPosition.top,
+            width: 300.w,
+            height: 247.h,
+            arrowHeight: 20.h,
+            arrowWidth: 20.w,
+            style: PaintingStyle.stroke,
+            color: Color(0xffE3E3E3),
+            child: Container()),
+        SizedBox(height: 57.h),
+        Text('您还可以通过以下方式导入',
+            style: TextStyle(fontSize: 30.sp, color: Color(0xff999999))),
+        Row(children: [
+          RadiusInkWellWidget(
+              color: Colors.transparent,
+              child: Container(height: 195.h, width: 262.w),
+              onPressed: () {},
+              radius: 12.r,
+              border: Border.all(color: Color(0xffDBDBDB), width: 1),
+              margin: EdgeInsets.only(right: 58.w, top: 62.h)),
+          RadiusInkWellWidget(
+              color: Colors.transparent,
+              child: Container(height: 195.h, width: 262.w),
+              onPressed: () {},
+              radius: 12.r,
+              border: Border.all(color: Color(0xffDBDBDB), width: 1),
+              margin: EdgeInsets.only(left: 58.w, top: 62.h))
+        ], mainAxisSize: MainAxisSize.min)
       ]),
     );
   }
