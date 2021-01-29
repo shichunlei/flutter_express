@@ -24,9 +24,10 @@ class _CheckExpressPageState extends State<CheckExpressPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.white,
         appBar: AppBar(title: Text("千库快递")),
         body: Container(
-          padding: EdgeInsets.symmetric(horizontal: 73.w),
+          padding: EdgeInsets.symmetric(horizontal: 75.w),
           child: Column(children: [
             RadiusInkWellWidget(
                 radius: 40.h,
@@ -51,21 +52,20 @@ class _CheckExpressPageState extends State<CheckExpressPage> {
                   Icon(IconFont.code, size: 38.r, color: Colors.grey),
                   SizedBox(width: 20.w),
                   Expanded(
-                    child: Container(
-                        height: 90.h,
-                        child: Row(children: [
-                          Expanded(child: TextField()),
-                          InkWell(
-                              child: Icon(IconFont.scan2,
-                                  color: Theme.of(context).primaryColor),
-                              onTap: () {})
-                        ]),
-                        decoration: BoxDecoration(
-                            border: Border(
-                                bottom: BorderSide(
-                                    color: Theme.of(context).dividerColor,
-                                    width: 1)))),
-                  )
+                      child: Container(
+                          height: 90.h,
+                          child: Row(children: [
+                            Expanded(child: TextField()),
+                            InkWell(
+                                child: Icon(IconFont.scan2,
+                                    color: Theme.of(context).primaryColor),
+                                onTap: () {})
+                          ]),
+                          decoration: BoxDecoration(
+                              border: Border(
+                                  bottom: BorderSide(
+                                      color: Theme.of(context).dividerColor,
+                                      width: 1)))))
                 ])),
             Container(
                 height: 100.h,
@@ -103,7 +103,7 @@ class _CheckExpressPageState extends State<CheckExpressPage> {
                         ])))),
             RadiusInkWellWidget(
                 child: Container(
-                    height: 93.h,
+                    height: 92.h,
                     width: double.infinity,
                     child: Text('查询',
                         style: TextStyle(color: Colors.white, fontSize: 39.sp)),
