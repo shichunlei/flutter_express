@@ -50,7 +50,8 @@ class _CheckExpressPageState extends State<CheckExpressPage> {
                 height: 90.h,
                 width: double.infinity,
                 child: Row(children: [
-                  Icon(IconFont.code, size: 38.r, color: Colors.grey),
+                  Image.asset('assets/images/code.png',
+                      width: 41.r, height: 30.r),
                   SizedBox(width: 20.w),
                   Expanded(
                       child: Container(
@@ -68,7 +69,7 @@ class _CheckExpressPageState extends State<CheckExpressPage> {
                                         fontSize: 32.sp,
                                         color: Color(0xff999999)))),
                             InkWell(
-                                child: Icon(IconFont.scan2,
+                                child: Icon(IconFont.scan,
                                     color: Theme.of(context).primaryColor),
                                 onTap: () {})
                           ]),
@@ -83,14 +84,12 @@ class _CheckExpressPageState extends State<CheckExpressPage> {
                 padding: EdgeInsets.only(top: 10.h),
                 child: RadiusInkWellWidget(
                     onPressed: () {},
-                    radius: 0,
-                    color: Colors.transparent,
                     child: Container(
                         height: 90.h,
                         width: double.infinity,
                         child: Row(children: [
-                          Icon(IconFont.building,
-                              size: 38.r, color: Colors.grey),
+                          Image.asset('assets/images/building.png',
+                              width: 38.r, height: 38.r),
                           SizedBox(width: 20.w),
                           Expanded(
                             child: Container(
@@ -136,7 +135,6 @@ class _CheckExpressPageState extends State<CheckExpressPage> {
                       alignment: Alignment.center),
                   onPressed: () {},
                   radius: 45.r,
-                  color: Colors.transparent,
                   border: Border.all(color: Color(0xffE3E3E3), width: 1)),
               SizedBox(width: 40.w),
               RadiusInkWellWidget(
@@ -148,7 +146,6 @@ class _CheckExpressPageState extends State<CheckExpressPage> {
                       alignment: Alignment.center),
                   onPressed: () {},
                   radius: 45.r,
-                  color: Colors.transparent,
                   border: Border.all(color: Color(0xffE3E3E3), width: 1)),
               SizedBox(width: 40.w),
               RadiusInkWellWidget(
@@ -160,7 +157,6 @@ class _CheckExpressPageState extends State<CheckExpressPage> {
                       alignment: Alignment.center),
                   onPressed: () {},
                   radius: 45.r,
-                  color: Colors.transparent,
                   border: Border.all(color: Color(0xffE3E3E3), width: 1)),
               SizedBox(width: 40.w),
               RadiusInkWellWidget(
@@ -171,7 +167,6 @@ class _CheckExpressPageState extends State<CheckExpressPage> {
                           size: 80.r, color: Colors.grey[300])),
                   onPressed: () {},
                   radius: 45.r,
-                  color: Colors.transparent,
                   border: Border.all(color: Color(0xffE3E3E3), width: 1))
             ], mainAxisSize: MainAxisSize.min)
           ]),

@@ -29,7 +29,7 @@ class RadiusInkWellWidget extends StatelessWidget {
   const RadiusInkWellWidget({
     Key key,
     @required this.child,
-    this.radius: 8,
+    this.radius: 0,
     this.color,
     @required this.onPressed,
     this.border,
@@ -67,7 +67,7 @@ class RadiusInkWellWidget extends StatelessWidget {
                         : color ??
                             (onPressed == null
                                 ? Theme.of(context).unselectedWidgetColor
-                                : Theme.of(context).primaryColor),
+                                : Colors.transparent),
                     border: border,
                     borderRadius: BorderRadius.circular(radius),
                     gradient: colors != null && colors.length > 0

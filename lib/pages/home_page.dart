@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bubble_widget/flutter_bubble_widget.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import '../widgets/arc_clipper.dart';
 import '../widgets/radius_inkwell_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../icon_font.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key}) : super(key: key);
@@ -54,45 +51,53 @@ class _HomePageState extends State<HomePage> {
                       alignment: Alignment.center,
                       child: Row(children: [
                         Expanded(
-                          child: Column(children: [
-                            Icon(IconFont.shipping,
-                                size: 60.r, color: Colors.white),
-                            SizedBox(height: 35.h),
-                            Text('在线寄件',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 28.sp))
-                          ], mainAxisSize: MainAxisSize.min),
-                        ),
+                            child: RadiusInkWellWidget(
+                                padding: EdgeInsets.symmetric(vertical: 30.h),
+                                onPressed: () {},
+                                child: Column(children: [
+                                  Image.asset('assets/images/shipping.png',
+                                      height: 50.r, width: 70.r),
+                                  SizedBox(height: 35.h),
+                                  Text('在线寄件',
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 28.sp))
+                                ], mainAxisSize: MainAxisSize.min))),
                         Expanded(
-                          child: Column(children: [
-                            Icon(IconFont.package,
-                                size: 60.r, color: Colors.white),
-                            SizedBox(height: 35.h),
-                            Text('电商包裹',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 28.sp))
-                          ], mainAxisSize: MainAxisSize.min),
-                        ),
+                            child: RadiusInkWellWidget(
+                                padding: EdgeInsets.symmetric(vertical: 30.h),
+                                onPressed: () {},
+                                child: Column(children: [
+                                  Image.asset('assets/images/package.png',
+                                      height: 51.r, width: 52.r),
+                                  SizedBox(height: 35.h),
+                                  Text('电商包裹',
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 28.sp))
+                                ], mainAxisSize: MainAxisSize.min))),
                         Expanded(
-                          child: Column(children: [
-                            Icon(IconFont.scan,
-                                size: 60.r, color: Colors.white),
-                            SizedBox(height: 35.h),
-                            Text('扫一扫',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 28.sp))
-                          ], mainAxisSize: MainAxisSize.min),
-                        ),
+                            child: RadiusInkWellWidget(
+                                padding: EdgeInsets.symmetric(vertical: 30.h),
+                                onPressed: () {},
+                                child: Column(children: [
+                                  Image.asset('assets/images/scan2.png',
+                                      height: 55.r, width: 55.r),
+                                  SizedBox(height: 35.h),
+                                  Text('扫一扫',
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 28.sp))
+                                ], mainAxisSize: MainAxisSize.min))),
                         Expanded(
-                          child: Column(children: [
-                            Icon(IconFont.time,
-                                size: 60.r, color: Colors.white),
-                            SizedBox(height: 35.h),
-                            Text('时效价格',
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 28.sp))
-                          ], mainAxisSize: MainAxisSize.min),
-                        )
+                            child: RadiusInkWellWidget(
+                                padding: EdgeInsets.symmetric(vertical: 30.h),
+                                onPressed: () {},
+                                child: Column(children: [
+                                  Image.asset('assets/images/time.png',
+                                      height: 61.r, width: 62.r),
+                                  SizedBox(height: 35.h),
+                                  Text('时效价格',
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 28.sp))
+                                ], mainAxisSize: MainAxisSize.min)))
                       ]))
                 ]))),
         RadiusInkWellWidget(
@@ -134,7 +139,6 @@ class _HomePageState extends State<HomePage> {
             style: TextStyle(fontSize: 30.sp, color: Color(0xff999999))),
         Row(children: [
           RadiusInkWellWidget(
-              color: Colors.transparent,
               child: Container(
                 height: 195.r,
                 width: 262.r,
@@ -156,7 +160,6 @@ class _HomePageState extends State<HomePage> {
               border: Border.all(color: Color(0xffDBDBDB), width: 1),
               margin: EdgeInsets.only(right: 58.w, top: 62.h)),
           RadiusInkWellWidget(
-              color: Colors.transparent,
               child: Container(
                 height: 195.r,
                 width: 262.r,
