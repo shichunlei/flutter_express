@@ -54,7 +54,9 @@ class _MyPageState extends State<MyPage> {
                     path:
                         'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.08087.cc%2Fuploads%2F20190415%2F18%2F1555325643-zhFdcDVQCS.jpg&refer=http%3A%2F%2Fimg.08087.cc&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1614391160&t=9a35269025efa31a3a231d03763e71a9',
                     radius: 60.r,
-                    border: Border.all(color: Color(0xff3172fe), width: 5.r)),
+                    border: Border.all(
+                        color: Theme.of(context).primaryColor.withAlpha(20),
+                        width: 5.r)),
                 SizedBox(width: 27.w),
                 Column(children: [
                   SizedBox(height: 15.h),

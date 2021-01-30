@@ -25,7 +25,6 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.white,
       body: Column(children: [
         Arc(
@@ -39,7 +38,7 @@ class _HomePageState extends State<HomePage> {
                 child: Column(children: [
                   Container(
                       child: AppBar(
-                          title: Text('寄快递，上千峰快递'),
+                          title: Text('寄快递，上千库快递'),
                           centerTitle: false,
                           elevation: 0,
                           backgroundColor: Colors.transparent),
@@ -52,48 +51,48 @@ class _HomePageState extends State<HomePage> {
                       child: Row(children: [
                         Expanded(
                             child: RadiusInkWellWidget(
-                                padding: EdgeInsets.symmetric(vertical: 30.h),
+                                padding: EdgeInsets.symmetric(vertical: 20.h),
                                 onPressed: () {},
                                 child: Column(children: [
                                   Image.asset('assets/images/shipping.png',
                                       height: 50.r, width: 70.r),
-                                  SizedBox(height: 35.h),
+                                  SizedBox(height: 28.r),
                                   Text('在线寄件',
                                       style: TextStyle(
                                           color: Colors.white, fontSize: 28.sp))
                                 ], mainAxisSize: MainAxisSize.min))),
                         Expanded(
                             child: RadiusInkWellWidget(
-                                padding: EdgeInsets.symmetric(vertical: 30.h),
+                                padding: EdgeInsets.symmetric(vertical: 20.h),
                                 onPressed: () {},
                                 child: Column(children: [
                                   Image.asset('assets/images/package.png',
                                       height: 51.r, width: 52.r),
-                                  SizedBox(height: 35.h),
+                                  SizedBox(height: 28.r),
                                   Text('电商包裹',
                                       style: TextStyle(
                                           color: Colors.white, fontSize: 28.sp))
                                 ], mainAxisSize: MainAxisSize.min))),
                         Expanded(
                             child: RadiusInkWellWidget(
-                                padding: EdgeInsets.symmetric(vertical: 30.h),
+                                padding: EdgeInsets.symmetric(vertical: 20.h),
                                 onPressed: () {},
                                 child: Column(children: [
                                   Image.asset('assets/images/scan2.png',
                                       height: 55.r, width: 55.r),
-                                  SizedBox(height: 35.h),
+                                  SizedBox(height: 25.r),
                                   Text('扫一扫',
                                       style: TextStyle(
                                           color: Colors.white, fontSize: 28.sp))
                                 ], mainAxisSize: MainAxisSize.min))),
                         Expanded(
                             child: RadiusInkWellWidget(
-                                padding: EdgeInsets.symmetric(vertical: 30.h),
+                                padding: EdgeInsets.symmetric(vertical: 20.h),
                                 onPressed: () {},
                                 child: Column(children: [
                                   Image.asset('assets/images/time.png',
-                                      height: 61.r, width: 62.r),
-                                  SizedBox(height: 35.h),
+                                      height: 55.r, width: 55.r),
+                                  SizedBox(height: 25.r),
                                   Text('时效价格',
                                       style: TextStyle(
                                           color: Colors.white, fontSize: 28.sp))
@@ -108,7 +107,9 @@ class _HomePageState extends State<HomePage> {
                 height: 75.h,
                 width: 662.w,
                 child: Row(children: [
-                  Icon(Icons.search, size: 33.r, color: Color(0xff999999)),
+                  Image.asset('assets/images/search.png',
+                      width: 30.r, height: 30.r),
+                  SizedBox(width: 20.w),
                   Text('查询1000+快递公司物流',
                       style:
                           TextStyle(fontSize: 30.sp, color: Color(0xff999999)))
@@ -125,10 +126,10 @@ class _HomePageState extends State<HomePage> {
             color: Color(0xffE3E3E3),
             child: Container(
               child: Column(children: [
-                SizedBox(height: 23.r),
+                SizedBox(height: 20.r),
                 Image.asset('assets/images/order.png',
                     width: 142.r, height: 86.r),
-                SizedBox(height: 12.r),
+                SizedBox(height: 10.r),
                 Text('输入单号\n开启智能查询',
                     style: TextStyle(color: Color(0xff030303), fontSize: 28.sp),
                     textAlign: TextAlign.center)

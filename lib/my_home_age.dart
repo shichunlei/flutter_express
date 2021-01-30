@@ -73,6 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomInset: false,
         body: IndexedStack(index: selectedIndex, children: [
           HomePage(),
           CheckExpressPage(),
@@ -91,7 +92,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         color: selectedIndex == 2
                             ? Theme.of(context).primaryColor
                             : Colors.white,
-                        borderRadius: BorderRadius.circular(54.r)),
+                        borderRadius: BorderRadius.circular(100.r)),
                     alignment: Alignment.center,
                     height: 119.r,
                     width: 119.r,

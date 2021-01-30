@@ -27,7 +27,7 @@ class _CheckExpressPageState extends State<CheckExpressPage> {
         resizeToAvoidBottomInset: false,
         backgroundColor: Colors.white,
         appBar: AppBar(title: Text("千库快递")),
-        body: Container(
+        body: SingleChildScrollView(
           padding: EdgeInsets.symmetric(horizontal: 75.w),
           child: Column(children: [
             RadiusInkWellWidget(
